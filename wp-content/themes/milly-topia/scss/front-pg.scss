@@ -1,0 +1,301 @@
+
+/*
+ * ─── COMPONENT FEATURE STYLE ───────────────────────────────────────────────────────────
+ */
+
+$slide-width: 600px;
+$slide-no: 8;
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc((#{$slide-width} * -1) * (#{$slide-no} / 2))); }
+}
+
+#hero {
+	display: flex;
+	flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+	width: 100%;
+    margin: 50px 0;
+
+	overflow-x: hidden;
+
+    h2 {
+        margin-top: 50px;
+        margin-bottom: 10px;
+    }
+
+    .slider {
+        overflow: hidden;
+        height: max-content;
+        background-color: red;
+        position: relative;
+        width: 100%;
+    }
+
+    .slide-track {
+        display: flex;
+        flex-wrap: nowrap;
+        top: 0px;
+        left: 0px;
+        overflow: hidden;
+        white-space: nowrap;
+        background-color: yellow;
+
+        animation: scroll 18.75s linear infinite;
+        width: calc(#{$slide-width} * #{$slide-no});
+
+        img {
+            width: $slide-width;
+        }
+    }
+
+    .slide {
+        max-width: $slide-width;
+    }
+    
+}
+
+/*
+ * ─── VIDEO FEATURE STYLE ───────────────────────────────────────────────────────────
+ */
+
+#featured-video {
+
+    margin-bottom: -6px;
+    
+    iframe {
+        width: 100%;
+        height: 80vh;
+        position: relative;
+    }
+
+    .shirt-left, 
+    .frog-right {
+        position: fixed;
+        background-color: #fff;
+        border: solid 3px #000;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        padding: 20px;
+        width: 150px;
+        top: 600px;
+    }
+
+    .shirt-left {
+        border-radius: 0 20px 20px 0;
+        left: 0;
+        border-left: none;
+        background-color: #9CE8E3;
+    }
+
+    .frog-right {
+        border-radius: 20px 0 0 20px;
+        right: 0;
+        border-right: none;
+        background-color: #E1A6DB;
+    }
+
+    .title {
+        position: absolute;
+        background-color: #fff;
+        border: solid 3px #000;
+        border-radius: 20px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        padding: 20px;
+        margin: 50px;
+
+        top: 100px;
+
+        span {
+            font-family: TimesNewMilly;
+            font-size: 2.5em;
+            text-transform: uppercase;
+        }
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    #featured-video { 
+        .title {
+            font-size: 0.8em;
+            top: auto;
+            bottom: 0;
+        }
+
+        .shirt-left {
+            display: none;
+        }
+
+        .frog-right {
+
+            width: 100px;
+
+            p {
+                display: none;
+            }
+
+            img {
+                width: 40px;
+            }
+        }
+    }
+}
+
+/*
+ * ─── ABOUT ME ───────────────────────────────────────────────────────────
+ */
+
+#about-me {
+    background-color: #9CE8E3;
+    border-top: solid 3px #000;
+    border-bottom: solid 3px #000;
+    padding: 50px 100px;
+}
+
+#about-me .wp-block-group__inner-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    img:first-of-type {
+        margin: 20px 0;
+    }
+
+    p {
+        font-size: 1.2em;
+        font-weight: 500;
+        width: 50%;
+    }
+
+    .social-links-group .wp-block-group__inner-container {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+.tiny-social {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 50px;
+    width: max-content;
+    height: max-content;
+    border: solid 3px #000;
+    transition: background-color 0.2s;
+
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 30px;
+        height: 30px;
+    }
+
+    img {
+        height: 25px;
+    }
+}
+
+#newsletter-icon::after {
+    content: "+";
+    background-color: #000;
+    color: #fff;
+    font-family: TimesNewMilly;
+    font-size: 2.2em;
+    line-height: 30px;
+
+    border-radius: 50px;
+
+    position: absolute;
+    width: 25px;
+    height: 25px;
+
+    margin-top: -45px;
+    margin-left: 5px;
+}
+
+@media only screen and (max-width: 1350px) {
+    #about-me .wp-block-group__inner-container {
+        p {
+            width: 100%;
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #about-me {
+        padding: 50px 20px;
+    }
+}
+
+/*
+ * ─── PROMOTIONS ───────────────────────────────────────────────────────────
+ */
+
+#promotions {
+    width: 100%;
+}
+
+#promotions .wp-block-group__inner-container {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    width: 100%;
+    overflow-x: scroll;
+
+    border-bottom: solid 3px #000;
+
+    .promotion__card:last-of-type {
+        border-right: none;
+    }
+}
+
+.promotion__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-right: solid 3px #000;
+    padding: 100px;
+    width: 100%;
+
+    img {
+        max-width: 100px;
+    }
+
+    .bold-black-button img {
+        max-width: 150px;
+        padding: 20px 30px;
+    }
+
+    .bold-black-button span {
+        font-size: 1.2em;
+        margin-bottom: -5px;
+        padding: 0 20px;
+    }
+
+    .bold-black-button {
+        width: max-content;
+    } 
+
+    p {
+        font-family: Karla;
+        font-style: italic;
+        font-weight: bold;
+        font-size: 1.5em;
+        margin-bottom: 10px;
+        color: #000;
+    }
+}

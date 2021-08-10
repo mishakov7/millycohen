@@ -1,0 +1,28 @@
+.teal-bg        { background-color: #7AD2B5; }
+.pink-bg        { background-color: #D576BF; }
+.green-bg       { background-color: #B2DB85; }
+.lemon-bg       { background-color: #C9DF62; }
+.blue-bg        { background-color: #4A4EC5; }
+
+.lt-teal-bg        { background-color: #9CE8E3; }
+.lt-pink-bg        { background-color: #E1A6DB; }
+.lt-green-bg       { background-color: #D5EEBA; }
+.lt-lemon-bg       { background-color: #DBE1A6; }
+.lt-blue-bg        { background-color: #B7A7F3; }
+
+.post {
+	.entry-content {
+        .teal-bg,
+        .pink-bg,
+        .green-bg,
+        .lemon-bg,
+        .blue-bg,
+        .lt-teal-bg,
+        .lt-pink-bg,
+        .lt-green-bg,
+        .lt-lemon-bg,
+        .lt-blue-bg {
+            background: none;
+        }
+	}
+}
