@@ -52,6 +52,7 @@
  * ─── VIDEO FEATURE STYLE ───────────────────────────────────────────────────────────
  */
 #featured-video {
+  width: 100%;
   margin-bottom: -6px;
 }
 #featured-video iframe {
@@ -1199,7 +1200,7 @@ textarea {
   width: 300px;
 }
 
-.entry-content {
+.post .entry-content {
   display: flex;
   justify-content: center;
   margin: 0 auto;
@@ -1348,35 +1349,36 @@ textarea {
   max-height: 60px;
 }
 
-.entry-content {
+.post .entry-content {
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto;
 }
 
-.entry-content img {
+.post .entry-content img {
   max-width: 500px;
 }
 
-.post .entry-content .wp-block-image {
+.post .entry-content .wp-block-image,
+.post .entry-content .wp-block-embed {
   background: none;
 }
 
-.entry-content .oacs-spl-like-button-wrapper {
+.post .entry-content .oacs-spl-like-button-wrapper {
   width: max-content;
 }
 
-.entry-content .oacs-spl-like-button-wrapper a {
+.post .entry-content .oacs-spl-like-button-wrapper a {
   display: flex;
   align-items: center;
 }
 
-.entry-content .oacs-spl-like-button {
+.post .entry-content .oacs-spl-like-button {
   text-decoration: none;
 }
 
-.entry-content .oacs-spl-like-button .oacs-spl-counter {
+.post .entry-content .oacs-spl-like-button .oacs-spl-counter {
   display: flex;
   text-decoration: none;
   font-family: Quicksand;
@@ -1388,7 +1390,7 @@ textarea {
   cursor: text;
 }
 
-.entry-content .oacs-spl-like-button .oacs-spl-icon {
+.post .entry-content .oacs-spl-like-button .oacs-spl-icon {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1398,7 +1400,7 @@ textarea {
   height: 60px;
 }
 
-.entry-content .oacs-spl-like-button .oacs-spl-icon::before {
+.post .entry-content .oacs-spl-like-button .oacs-spl-icon::before {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1409,7 +1411,7 @@ textarea {
   transition: color 0.2s;
 }
 
-.entry-content .oacs-spl-like-button .oacs-spl-icon:hover::before {
+.post .entry-content .oacs-spl-like-button .oacs-spl-icon:hover::before {
   color: #f34343;
 }
 
