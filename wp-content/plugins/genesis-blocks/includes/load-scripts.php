@@ -43,7 +43,7 @@ function genesis_blocks_editor_assets() {
 	wp_enqueue_script(
 		'genesis-blocks-block-js',
 		plugins_url( '/dist/blocks.build.js', dirname( __FILE__ ) ),
-		array( 'wp-blocks', 'wp-i18n', 'wp-element', 'wp-components' ),
+		array( 'wp-block-editor', 'wp-blocks', 'wp-components', 'wp-data', 'wp-edit-post', 'wp-element', 'wp-i18n' ),
 		filemtime( plugin_dir_path( genesis_blocks_main_plugin_file() ) . 'dist/blocks.build.js' ),
 		true
 	);

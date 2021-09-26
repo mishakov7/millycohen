@@ -99,5 +99,10 @@ final class ManualRequire {
 		 * Block Deprecation Handlers.
 		 */
 		require_once $blocks_path . 'block-author-profile/deprecated/1.8.2/filter.php';
+
+		/**
+		 * Genesis Responsive Controls Handlers.
+		 */
+		require_once $blocks_path . 'responsive-controls/fonts.php';
 	}
 }

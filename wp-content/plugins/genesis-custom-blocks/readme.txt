@@ -5,7 +5,7 @@ Tags: gutenberg, blocks, block editor, fields, template
 Requires at least: 5.4
 Tested up to: 5.8
 Requires PHP: 5.6
-Stable tag: 1.3.0
+Stable tag: 1.3.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl
 
@@ -101,6 +101,13 @@ A: No. You can keep using your PHP block templates like block-example.php.
 * [Documentation](https://developer.wpengine.com/genesis-custom-blocks)
 
 == Changelog ==
+
+= 1.3.1 - 2021-08-26 =
+
+Fix for fields with long strings
+
+* Fix a regression that caused editor errors for fields with long strings. [PR 89](https://github.com/studiopress/genesis-custom-blocks/pull/89)
+* Update e2e tests for WP 5.8. [PR 87](https://github.com/studiopress/genesis-custom-blocks/pull/87)
 
 = 1.3.0 - 2021-07-20 =
 
