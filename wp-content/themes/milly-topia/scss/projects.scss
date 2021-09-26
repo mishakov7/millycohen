@@ -2,16 +2,15 @@
 /*
  * ─── POST PAGES ─────────────────────────────────────────────────────────────────
  */
-
 .entry-title,
-.post-category-title .post-categories li a {
+.post .post-category title .post-categories li a {
 
 	background-color: #000;
 	color: #fff;
 
 	border-radius: 0 0 10px 10px;
 
-	padding: 10px 50px;
+	padding: 0 20px;
 	margin: 0 auto 50px auto;
 
 	font-family: TimesNewMilly;
@@ -19,256 +18,15 @@
 	font-weight: 100;
 	text-align: center;
 
-	width: max-content;
-}
-
-.entry-title {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	max-height: 60px;
+	width: 300px;
 }
 
 .entry-content {
 	display: flex;
-	align-items: center;
 	justify-content: center;
 
 	margin: 0 auto;
-
-	img {
-		max-height: 500px;
-	}
-
-	.oacs-spl-like-button-wrapper {
-		width: max-content;
-		
-		a {
-			display: flex;
-			align-items: center;
-		}
-	}
-
-	.oacs-spl-like-button {
-		text-decoration: none;
-	}
-
-	.oacs-spl-like-button .oacs-spl-counter {
-		display: flex;
-		text-decoration: none;
-
-		font-family: Quicksand;
-		font-weight: 600;
-		font-size: 14pt;
-		text-transform: uppercase;
-
-		margin-left: 10px;
-
-		color: #000;
-		cursor: text;
-	}
-
-	.oacs-spl-like-button .oacs-spl-icon {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		background-color: #000;
-		border-radius: 50px;
-		width: 60px;
-		height: 60px;
-	}
-
-	.oacs-spl-like-button .oacs-spl-icon::before {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		font-size: 1.8em;
-		color: #fff;
-		padding: 10px;
-
-		margin-left: 2px;
-		transition: color 0.2s;
-	}
-
-	.oacs-spl-like-button .oacs-spl-icon:hover::before {
-		color: rgb(243, 67, 67);
-	}
 }
-
-.post-navigation {
-	display: none;
-}
-
-.post-category-title .post-categories {
-	width: 100%;
-	margin: 0;
-	padding: 0;
-	display: flex;
-	justify-content: center;
-	text-align: center;
-
-	li {
-		list-style-type: none;
-		margin: 0;
-		padding: 0;
-
-		width: 100%;
-	}
-
-	li a {
-		text-decoration: none;
-		font-weight: 100;
-		text-align: left;
-		margin: 0;
-		padding: 15px 50px;
-	}
-}
-
-.post-title {
-	margin: 10px auto;
-	text-align: center;
-
-	background: none;
-	color: #000;
-
-	font-family: Karla;
-	font-size: 1.5em;
-	font-style: italic;
-	font-weight: bold;
-}
-
-@media only screen and (max-width: 600px) {
-	.post-category-title .post-categories {
-		li a {
-			font-size: 2em;
-		}
-	}
-
-	.post-title {
-		font-size: 1.2em;
-	}
-}
-
-#comments {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	margin-bottom: 100px;
-	width: auto;
-
-	.comment-list,
-	.comment-respond {
-		width: 50%;
-	}
-
-	.comment-list {
-		margin: 0;
-		padding: 25px 40px;
-		border-radius: 40px;
-		border: solid 3px #000;
-		background-color: #5FBAFF;
-
-		.comment {
-			width: auto;
-			border-bottom: solid 3px #000;
-			margin: 20px 0;
-
-			.comment-author {
-				display: flex;
-				align-items: center;
-				justify-content: flex-start;
-				font-size: 16pt;
-
-				.avatar {
-					border-radius: 50px;
-				}
-
-				.fn {
-					margin: 0 10px;
-					a {
-						color: #000;
-						text-decoration: none;
-					}
-				}
-				.says {
-					display: none;
-				}
-			}
-
-			.comment-metadata {
-				font-size: 12pt;
-				a {
-					text-decoration: none;
-					color: #000;
-				}
-			}
-
-			.comment-content {
-				color: #000;
-				font-size: 14pt;
-				font-weight: 600;
-				margin-top: -10px;
-			}
-		}
-
-		.comment:last-of-type {
-			border: none;
-		}
-	}
-
-	.comment-respond {
-		.comment-reply-title {
-			font-family: Karla;
-			font-size: 18pt;
-			font-weight: 800;
-			font-style: italic;
-			margin: 20px 0 -10px 0;
-		}
-
-		.comment-form-comment label {
-			display: none;
-		}
-
-		.comment-form-comment textarea {
-			border: solid 3px #000;
-			border-radius: 20px;
-		}
-
-		.form-submit .submit {
-			background-color: #000;
-			color: #fff;
-			padding: 10px 20px;
-			border: none;
-			border-radius: 8px;
-			cursor: pointer;
-
-			text-transform: uppercase;
-			font-size: 1.2em;
-			font-weight: 800;
-
-			display: flex;
-			align-items: center;
-			justify-content: center;
-		
-			transition: background-color 0.2s;
-		}
-
-		.form-submit .submit:hover {
-			background-color: #5FBAFF;
-		}
-	}
-}
-
-@media only screen and (max-width: 1100px) {
-	#comments {
-		.comment-list,
-		.comment-respond {
-			width: 80%;
-		}
-	}
-}
-
-// Display Posts Plugin
 
 .display-posts-listing {
 	display: flex;
@@ -281,12 +39,48 @@
 	padding-bottom: 100px;
 }
 
+.post {
+	position: relative;
+
+	.entry-header {
+		margin-bottom: 100px;
+	}
+
+	.post-category-title .post-categories{
+	
+		ul li {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		li a {
+			color: #fff;
+			text-decoration: none;
+		}
+	}
+
+	.post-title {
+		margin-right: auto;
+		margin-left: 100px;
+
+		background: none;
+		color: #000;
+
+		font-family: Karla;
+		text-align: left;
+		font-size: 1.5em;
+		font-style: italic;
+		font-weight: bold;
+	}
+}
+
+// Button styles are here
 .display-posts-listing .listing-item {
 	list-style-type: none;
 	margin: 50px;
 
-	.wp-block-image,
-	.wp-block-embed {
+	.wp-block-image {
 		border: solid 3px #000;
 		padding: 50px;
 	
@@ -294,19 +88,15 @@
 	
 		list-style-type: none;
 	
-		display: flex;
-		place-items: center;
-		transition: transform 0.2s;
-	}
-
-	.wp-block-image {
 		width: 300px;
 		height: 300px;
+	
+		display: flex;
+		place-items: center;
 	}
 
-	.wp-block-image:hover,
-	.wp-block-embed:hover {
-		transform: rotate(5deg);
+	.content .oacs-spl-like-button {
+		text-decoration: none;
 	}
 
 	.content .oacs-spl-like-button-wrapper {
@@ -318,24 +108,8 @@
 		}
 	}
 
-	.content .oacs-spl-like-button {
-		text-decoration: none;
-	}
-
 	.content .oacs-spl-like-button .oacs-spl-counter {
-		display: flex;
-		text-decoration: none;
-		position: absolute;
-		margin-top: -30px;
-		margin-left: 135px;
-
-		font-family: Quicksand;
-		font-weight: 600;
-		font-size: 14pt;
-		text-transform: uppercase;
-
-		color: #000;
-		cursor: text;
+		display: none;
 	}
 
 	.content .oacs-spl-like-button .oacs-spl-icon {
@@ -357,6 +131,7 @@
 		padding: 10px;
 
 		margin-left: 2px;
+		margin-top: -3px;
 		transition: color 0.2s;
 	}
 
@@ -368,16 +143,15 @@
 		display: flex;
 		text-decoration: none;
 		position: absolute;
-		margin-top: -84px;
+		margin-top: -83px;
 		margin-left: 65px;
 
 		font-family: Quicksand;
 		font-weight: 600;
-		font-size: 14pt;
+		font-size: 1.2em;
 		text-transform: uppercase;
 
 		color: #000;
-		cursor: text;
 	}
 
 	.comments-icon {
@@ -390,21 +164,19 @@
 		width: 60px;
 		height: 60px;
 
+		font-size: 1.8em;
 		padding: 10px;
 		margin-right: 10px;
 		transition: color 0.2s;
-		cursor: pointer;
-	
-		svg {
-			fill: #fff;
-			width: 30px;
+	}
 
-			transition: fill 0.2s;
-		}
+	.comments-icon svg path {
+		fill: rgb(255, 255, 255);
+		transition: fill 0.2s;
+	}
 
-		svg:hover {
-			fill: #5FBAFF
-		}
+	.comments-icon svg path:hover {
+		fill: rgb(95, 186, 255);
 	}
 	
 }
