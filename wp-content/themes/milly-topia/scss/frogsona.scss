@@ -1,0 +1,217 @@
+.milly-border {
+    border: solid 5px #000;
+}
+
+.milly-border-notop {
+    border-left: solid 5px #000;
+    border-right: solid 5px #000;;
+    border-bottom: solid 5px #000;
+}
+
+#frogsona-game-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+
+#dressup-container {
+    // position: relative;
+    width: 90vw;
+    margin: 50px 0;
+    top: 600px;
+}
+
+#canvas-tools-group {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    margin-bottom: 450px;
+    margin-top: -50px;
+}
+
+#tools-container {
+    margin-bottom: 50px;
+    display: flex;
+}
+
+#tools-container span {
+    background-color: #5FBAFF;
+    color: white;
+    padding: 15px;
+    margin: 0 5px;
+    font-size: 2em;
+    cursor: pointer;
+    
+    border-radius: 20px;
+}
+
+#tools-container span:hover {
+    background-color: #000;
+}
+
+#tools-container span:hover svg {
+    fill: #fff;
+}
+
+/* Dressup container styles */
+#categories-container {
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: #000;
+    border-radius: 30px 30px 0 0;
+
+    padding: 20px;
+
+    overflow-x: scroll;
+    width: auto;
+}
+
+#clothing-container {
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: #5FBAFF;
+    border-radius: 0px 0px 30px 30px;
+    padding: 40px;
+
+    overflow-x: scroll;
+}
+
+.cloth-container {
+    display: none;
+}
+
+.cloth-container .cloth {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    width: 100px;
+    height: 100px;
+
+    margin: 0 15px;
+
+    background-color: #FFF;
+}
+
+#categories-container .category {
+    margin: 5px 20px;
+    cursor: pointer;
+}
+
+#categories-container .category svg {
+    width: 40px;
+    height: 40px;
+    fill: #fff;
+}
+
+#categories-container .outerwear svg {
+    width: 50px;
+}
+
+#categories-container .category svg:hover {
+    fill: #5FBAFF;
+}
+
+.cloth-container .cloth img, .cloth img {
+    width: 75px;
+}
+
+/* Establish layering */
+#canvas-tools-group {
+    display: flex;
+    place-items: center;
+    width: 100%;
+    background-color: red;
+}
+
+#canvases-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#canvases-container canvas {
+    position: absolute;
+}
+
+#backdrops-layer {
+    z-index: 1;
+}
+
+#frogsona-canvas {
+    z-index: 2;
+}
+
+#socks-layer {
+    z-index: 3;
+}
+
+#bottoms-layer,
+#dresses-layer,
+#hats-layer,
+#glasses-layer,
+#bags-layer,
+#items-layer {
+    z-index: 4;
+}
+
+#tops-layer,
+#outerwear-layer,
+#scarves-layer,
+#ties-layer {
+    z-index: 5;
+}
+
+#tools-container {
+    z-index: 6;
+}
+
+@media only screen and (min-width: 1200px) {
+
+    #tools-container {
+        position: absolute;
+        top: 550px;
+        right: 150px;
+    }
+
+    #frogsona-game-container {
+        flex-direction: row-reverse;
+        align-items: flex-start;
+        width: auto;
+    }
+
+    #canvas-tools-group {
+        width: 480px;
+        margin-top: 50px;
+    }
+
+    #dressup-container {
+        width: 50vw;
+        top: 0;
+    }
+
+    #dressup-container {
+        #clothing-container {
+            overflow-x: hidden;
+        }
+    }
+
+    #categories-container, 
+    #clothing-container .cloth-container {
+        flex-wrap: wrap;
+        // overflow-x: hidden;
+    }
+
+    #clothing-container .cloth-container {
+        overflow-y: scroll;
+        height: 50vh;
+    }
+
+    .cloth-container .cloth {
+        margin: 15px;
+    }
+}
