@@ -62,13 +62,30 @@
 	}
 }
 
+.custom-listing-item {
+	border: solid 3px #000;
+	padding: 30px;
+	border-radius: 30px;
+	list-style-type: none;
+	display: flex;
+	place-items: center;
+	transition: transform 0.2s;
+	width: max-content;
+
+	margin: 0 auto;
+}
+
+.custom-listing-item:hover {
+	transform: rotate(5deg);
+}
+
 // Button styles are here
 .display-posts-listing .listing-item {
 	list-style-type: none;
 	margin: 50px;
 
 	.wp-block-image,
-	.wp-block-embed {
+	.wp-block-embed{
 		border: solid 3px #000;
 		padding: 50px;
 		border-radius: 30px;

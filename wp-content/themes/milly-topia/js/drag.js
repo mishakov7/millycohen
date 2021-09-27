@@ -1,6 +1,6 @@
 function drag(e) {
     e.dataTransfer.setData("text", e.target.id);
-    window.location.href = "http://localhost/millycohen-com/drawings/";
+    window.location.href = "games/frogsona";
 
 }
 
