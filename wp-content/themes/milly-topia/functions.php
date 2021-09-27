@@ -178,3 +178,6 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+update_option('siteurl', 'https://localhost/millycohen-com');
+update_option('home', 'https://localhost/millycohen-com');
