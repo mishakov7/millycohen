@@ -14,8 +14,8 @@ function chooseTop() {
 
     $filename = pathinfo($array[$index])['filename'];
 
-    if ($filename[-2] . $filename[-1] == 'on') {
-        $index++;
+    while ($filename[-2] . $filename[-1] == 'on') {
+        $index--;
         $filename = pathinfo($array[$index])['filename'];
     }
 
@@ -53,6 +53,5 @@ function console_log($data) {
         <p>Drag the shirt over here!</p>
     </div>
 
-    <script src="http://localhost/millycohen-com/wp-content/themes/milly-topia/js/drag.js"></script>
-
+    <script src="wp-content/themes/milly-topia/js/drag.js"></script>
 </section>

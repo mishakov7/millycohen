@@ -1,0 +1,26 @@
+.linktree-group .wp-block-group__inner-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.linktree-btn {
+    padding: 10px 25px;
+    border: solid 3px #000;
+    border-radius: 5px;
+    width: max-content;
+    margin: 10px 0;
+    
+    transition: transform 0.2s;
+}
+
+.linktree-btn a {
+    font-family: Karla;
+    font-size: 1.2em;
+    color: #000;
+}
+
+.linktree-btn:hover {
+    transform: rotateX(10deg);
+}

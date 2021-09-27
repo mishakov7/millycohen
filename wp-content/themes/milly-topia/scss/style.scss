@@ -12,6 +12,10 @@
  * ────────────────────────────────────────────────────────────────────────────────
  */
 
+.hide {
+	display: none;
+}
+
 @font-face {
 	font-family: Karla;
 	src: url("fonts/Karla/KARLA-REGULAR.TTF") format("truetype");
